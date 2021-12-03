@@ -1,0 +1,177 @@
+@use "abstracts" as *;
+
+/* Typographical Elements
+--------------------------------------------- */
+
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+    transition: all 0.2s ease-in-out;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: underline;
+    text-decoration-color: $grey-7;
+    @include transition;
+
+    &:hover {
+        color: $grey-7;
+    }
+
+    svg {
+        @include transition;
+    }
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 0;
+    border-collapse: collapse;
+    border-bottom: 1px solid currentColor;
+    clear: both;
+    color: $grey_3;
+    margin: 1.65em auto;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+/* Paragraph and Gutenberg font sizes
+--------------------------------------------- */
+
+p {
+    margin: 0 0 28px;
+    padding: 0;
+}
+
+.has-small-font-size {
+    font-size: .85em !important;
+}
+
+.has-normal-font-size {
+    font-size: 1em !important;
+}
+
+.has-large-font-size {
+    font-size: 1.2em !important;
+}
+
+.has-huge-font-size {
+    font-size: 1.5em !important;
+}
+
+/* Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $white;
+    font-family: $sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: $margin_2x 0 $block-margin;
+    scroll-margin-top: 5rem;  // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+
+    // Entry and Archive titles
+    &.entry-title,
+    &.archive-title {
+        margin: $block-margin auto $margin_2x;
+        text-align: center;
+        color: $white;
+        font-weight: 600;
+        max-width: 672px;
+    }
+
+    a {
+        color: $grey-9;
+
+        &:hover {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+h1,
+.entry-title {
+    @include font-sizes(35px, 42px, 48px);
+}
+
+h2 {
+    @include font-sizes(30px, 38px, 44px);
+
+    &.tahu {
+        font-family: 'Tahu', $sans-serif;
+        font-size: clamp(2.80rem, 2vw + 2.40rem, 4.375rem);
+        font-weight: normal;
+    }
+}
+
+h3 {
+    @include font-sizes(22px, 26px, 28px);
+}
+
+h4{
+    @include font-sizes(20px, 24px, 26px);
+}
+
+h5 {
+    @include font-sizes(22px, 26px);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 500;
+}
+
+h6 {
+    @include font-sizes(18px, 22px);
+}
+
+/* Objects
+--------------------------------------------- */
+
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+    vertical-align: top;
+}
+
+figure {
+    margin: 0;
+}

@@ -1,0 +1,92 @@
+@use "abstracts" as *;
+
+/* Button
+--------------------------------------------- */
+
+.wp-block-button__link {
+	border: 2px solid $primary-color;
+	border-radius: 3px;
+	font-size: 16px;
+    font-weight: 600;
+	text-transform: uppercase;
+	line-height: 32px;
+	padding: .6ch 2.1ch;
+	text-decoration: none;
+
+	.is-style-full &,
+	&.full {
+		display: block;
+		width: 100%;
+	}
+
+	&:not(.has-text-color) {
+		color: $grey-base;
+
+		&:hover {
+			color: $grey-base;
+		}
+	}
+
+	&:not(.has-background) {
+		background-color: $primary-color;
+
+		&:hover,
+		&:focus {
+            border: 2px solid $highlight;
+			background-color: $highlight;
+		}
+	}
+
+    .is-style-outline > &:not(.has-text-color), // front-end
+    &.is-style-outline {
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        background-color: transparent;
+	    padding: .6ch 2.1ch;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $primary-color;
+			background-color: $primary-color;
+            color: $grey-base;
+        }
+    }
+    
+    // > .wp-block-button__link:not(.has-text-color), .wp-block-button__link.is-style-outline:not(.has-text-color)
+
+	@each $name, $color in $brand_colors {
+
+		&.has-#{$name}-color:hover,
+		&.has-#{$name}-color:focus {
+			color: $color;
+		}
+
+		&.has-#{$name}-background-color:hover,
+		&.has-#{$name}-background-color:focus {
+			background-color: brand-color( $name, 'darken' );
+		}
+	}
+
+}
+
+.wp-block-button {
+    &.rv-hidden__open {
+        &.download-icon {
+            position: relative;
+            
+            &::before {
+                @include block-cover();
+                background: url(../icons/utility/download.svg) no-repeat;
+                width: 28px;
+                height: 28px;
+                top: 50%;
+                left: 1em;
+                transform: translateY(-50%);
+            }
+
+            .wp-block-button__link {
+                padding-left: 2.85em;
+            }
+        }
+    }
+}

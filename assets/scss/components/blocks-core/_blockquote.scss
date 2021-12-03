@@ -1,0 +1,92 @@
+@use "abstracts" as *;
+@use "../../vendor/include-media" as *;
+
+/* Blockquote
+--------------------------------------------- */
+
+blockquote.wp-block-quote {
+    position: relative;
+        padding: 60px 5% 35px;
+        margin: $margin_2x auto;
+        text-align: left;
+
+    &::before {
+        @include block-cover();
+        width: 55px;
+        height: 48px;
+        left: 50%;
+        transform: translateY(-5px) translateX(-50%);
+        padding: 20px;
+        background: url(../icons/utility/quote.svg) no-repeat center center;
+        background-size: cover;
+        text-align: left;
+    }
+
+	p {
+		color: $base-color;
+		@include font-sizes(22px, 24px 26px);
+        text-align: center;
+		font-style: italic;
+		font-weight: 400;
+	}
+
+	cite {
+		color: $base-color;
+		display: block;
+		@include font-sizes(22px, 24px 26px);
+        text-align: center;
+		font-weight: 700;
+		margin-top: 12px;
+		opacity: .5;
+	}
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
+}
+
+.entry-content {
+
+    .wp-block-pullquote {
+        text-align: left;
+        padding: 0;
+        margin: $margin_4x auto;
+    
+        blockquote {
+            margin: 0;
+            padding: .5em 0 0 0 ;
+            position: relative;
+    
+            p {            
+                color: $primary-color;
+                @include font-sizes(28px, 29px, 31px);
+                font-weight: 600;
+                line-height: 1.57;
+    
+                &::before {
+                    @include block-cover();
+                    top: -1em;
+                    width: 70px;
+                    height: 2px;
+                    background-color: $primary-color;
+                    margin-top: .8em;
+                    margin-right: 36px;
+                } 
+            }
+
+            @include media('>=small') {
+                padding: .5em 4% 0 106px;
+
+                p {
+
+                    &::before{
+                        top: .3em;
+                    }
+                }
+
+            }
+        }  
+    }
+}
+

@@ -1,0 +1,175 @@
+{
+    "key": "group_5dd458c5a322b",
+    "title": "Rift Valley Options",
+    "fields": [
+        {
+            "key": "field_616e96127eb74",
+            "label": "Imagen de respaldo",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5dd458cd3c3fd",
+            "label": "Default Image",
+            "name": "ea_default_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_616e96427eb75",
+            "label": "Formulario oculto en las rutas",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_610a5944f3d20",
+            "label": "Viajes Contacto - Título",
+            "name": "rv_contact_form_viajes_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_610a597a447da",
+            "label": "Viajes Contacto - Subtítulo",
+            "name": "rv_contact_form_viajes_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_610967d6a443f",
+            "label": "Viajes Contacto - Formulario",
+            "name": "rv_contact_form_viajes",
+            "type": "text",
+            "instructions": "Añade aquí el SHORTCODE del formulario de contacto que quieras que aparezca en la caja oculta en los viajes.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_610a59aeb3c44",
+            "label": "Viajes  Contacto - Teléfono",
+            "name": "rv_contact_form_viajes_phone",
+            "type": "text",
+            "instructions": "Añade aquí el teléfono de contacto al cual quieres que se realicen las llamadas. <strong>Incluye el número sin símbolos ni espacios. Ej: 666123456<\/strong>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_610a5c444bfdd",
+            "label": "Viajes  Contacto - Whatsapp",
+            "name": "rv_contact_form_viajes_whatsapp",
+            "type": "text",
+            "instructions": "Añade aquí el teléfono de contacto al cual quieres que lleguen los Whatsapps. <strong>Incluye el número sin símbolos ni espacios. Ej: 666123456<\/strong>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 666123456,
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-rift-valley-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1637748628
+}

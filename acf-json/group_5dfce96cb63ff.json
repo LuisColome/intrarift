@@ -1,0 +1,123 @@
+{
+    "key": "group_5dfce96cb63ff",
+    "title": "Block: Listado SI \/ NO incluye",
+    "fields": [
+        {
+            "key": "field_5e01f56e534a6",
+            "label": "Título",
+            "name": "list_incluye_title",
+            "type": "text",
+            "instructions": "Título del bloque de los listados SI incluye \/ NO incluye. Este campo es condicional, de no rellenarse no aparecerá en la web.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d78a742346c1",
+            "label": "Listado detallado de lo que SI incluye la ruta",
+            "name": "list_incluye",
+            "type": "repeater",
+            "instructions": "Añade tantos detalles ( campos de texto ) como desees acerca de lo que incluye la ruta\/viaje.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Añadir nuevo elemento",
+            "sub_fields": [
+                {
+                    "key": "field_5d78a78f346c2",
+                    "label": "Detalles que incluye el Viaje \/ Ruta",
+                    "name": "detail_incluye",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d78a7e2d8e50",
+            "label": "Listado detallado de lo que NO incluye la ruta (copy)",
+            "name": "list_no_incluye",
+            "type": "repeater",
+            "instructions": "Añade tantos detalles ( campos de texto ) como desees acerca de lo que NO incluye la ruta\/viaje.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Añadir nuevo elemento",
+            "sub_fields": [
+                {
+                    "key": "field_5d78a7e2d8e51",
+                    "label": "Detalles que NO incluye el Viaje \/ Ruta",
+                    "name": "detail_no_incluye",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/rv-listas-incluye"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1638254907
+}

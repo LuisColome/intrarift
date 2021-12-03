@@ -1,0 +1,162 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Archive partial for viajes.
+------------------------------------------------------------------------------ */
+
+.viaje {
+    background-color: $grey_darker;
+    border-radius: $border-radius;
+
+    
+    // Contenedor imagen destacada.
+    &__image {
+        position: relative;
+
+        // Imagen destacada.
+        &__img {
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+        }
+
+        // Dark overlay featured image.
+        &__gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 10%;
+            background-image: linear-gradient(to bottom, rgba(15, 14, 14, 0) 2%, $grey_darker 99%);
+        }
+    }
+
+
+    // Header - Picture + Taxonomy (País) + Title
+    &__header {
+        position: relative;
+        padding-bottom: 75px; // "white" space for País + Title
+
+        &__info {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+
+    // Taxonomía Destinos on Viajes loop
+    &__pais {
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: $primary-color;
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    // Long Hyphen before and after destinos in loops.
+    &__guion {
+        font-weight: 700;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        margin: .4ch 0 .65ch;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            
+            span {
+                display: block;
+            }
+        }
+
+    }
+
+    // Main content on the  Viajes Loop
+    &__main {
+        padding: 3px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__content {
+        font-size: 16px;
+        border-top: 1px solid $grey_10;
+        border-bottom: 1px solid $grey_10;
+        min-height: 132px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        padding: 2% 0;
+
+        * {
+            margin-bottom: 2px;
+        }
+    }
+
+    &__guia {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+        &__icon {
+            flex: 0 0 34px;
+            max-height: 24px;
+        }
+
+        &__text {
+            line-height: 1.3;
+            color: $primary-color;
+        }
+    }
+
+
+    // Experiencias taxonomy as no linked tags.
+    &__experiencias {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: auto;
+    }
+
+    &__experiencia {
+        font-size: 9px;
+        text-transform: uppercase;
+        padding: .5ch 2ch;
+        background-color: $grey_base;
+        border-radius: 3.6px;
+        margin: 0 4px 4px 0;
+    }
+
+
+    // Foofer at the Viajesloop
+    &__footer {
+        padding: 16px 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__dias,
+    &__precio {
+        font-size: 16px;
+        font-weight: 700;
+        color: $white;
+    }
+
+    &__read-more-link.wp-block-button__link {
+        font-size: 15px;
+        line-height: 1;
+        padding: .65ch 1.2ch;
+    }
+}

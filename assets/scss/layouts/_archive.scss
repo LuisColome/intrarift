@@ -1,0 +1,275 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* General styles
+------------------------------------------------------------------------------ */
+
+.archive {
+    
+    .site-main {
+        margin-bottom: $margin_4x;
+    }
+}
+
+/* Archive Header
+--------------------------------------------- */
+
+.archive-description {
+	text-align: center;
+	width: 100%;
+	max-width: $content-width;
+	margin: 0 auto $grid-gap;
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+
+	.search-form {
+		margin: 0 auto;
+	}
+
+}
+
+.author-archive-description {
+
+	.avatar {
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto 16px;
+	}
+
+	h3:last-child {
+		@include media(">=tablet") {
+			margin-top: 48px;
+		}
+	}
+}
+
+.author-title {
+	color: $grey_8;
+	@include font-sizes( 18px, 20px );
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+/* Native posts archive (based on partials/archive).
+------------------------------------------------------------------------------ */
+
+// custom post type grid templates columns variables. 
+.lcm-posts {
+
+    &.grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $margin_2x $grid-gap;
+
+        @include media(">=small") {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include media(">=medium") {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        // Grid for etnias with 2 columns max thanks to the class added in loop.php.
+        &.etnias {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        // Grid for Viajes with smaller gap thanks to the class added in loop.php.
+        &.viajes {
+            gap: $margin_2x $wrap_edge;
+        }
+
+        &.prensa,
+        &.parques,
+        &.lugares {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+/* Native blog posts.
+------------------------------------------------------------------------------ */
+
+.lcm-post {
+    display: flex;
+    flex-flow: column;
+
+    .lcm-post__header,
+    .lcm-post__content {
+        padding: 8px;
+    }
+
+    .lcm-post__category {
+        background-color: $grey_9 ;
+        color: $white;
+        font-size: 9px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: $base-margin / 2 0 0 0;
+        padding: .6ch 1.4ch;
+        letter-spacing: .6px;
+        border-radius: 4px;
+
+    }
+
+    &__title {
+        line-height: .6;
+        margin: .4rem 0 0 0;
+        
+        a {
+            @include font-sizes(20px, 22px, 22px);
+            text-decoration: none;
+            color: $white;
+            font-weight: 600;
+            
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__intro {
+        font-size: 16px;
+        margin: 0;
+    }
+
+	.lcm-post__read-more-link {
+		text-decoration: none;
+		font-size: 65%;
+		text-transform: uppercase;
+        letter-spacing: 1px;
+
+		&::after {
+			content: "\2192";
+			display: inline-block;
+            transform: translateX(4px);
+            @include transition();
+		}
+
+        &:hover::after {
+            transform: translateX(9px);
+        }
+	}
+}
+
+/* EPL items (Etnias, Parques y Lugares archive items)
+------------------------------------------------------------------------------ */
+
+.epl {
+
+    // etnias CPT
+    &__etnia {
+        display: flex;
+        flex-flow: column nowrap;
+
+        @include media('>=820px') {
+            flex-flow: row nowrap;
+        }
+    }
+
+    &__image {
+        margin: 0 0 15px 0;
+        flex: 1 0 175px;
+
+        @include media('>=820px') {
+            margin: 0 15px 0 0;
+        }
+    }
+
+    &__content {
+        flex: 0 1 100%;
+    }
+
+    &__title {
+        @include font-sizes(21px, 23px, 26px);
+        margin: 0 0 .5rem 0;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            line-height: 1;
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__intro,
+    &__read-more-link {
+        @include font-sizes(14px, 16px);
+        margin: 0;
+        text-decoration: none;
+    }
+}
+
+/* Pagination
+--------------------------------------------- */
+
+.pagination {
+    grid-column: 1 / -1;
+	border-top: 1px solid $border-color;
+	font-size: 16px;
+	text-align: center;
+	padding-top: 22px;
+    margin-top: $block-margin;
+
+	ul {
+        display: flex;
+        flex-flow: row nowrap;
+        width: max-content;
+        margin: 0 auto;
+
+		li {
+			list-style-type: none;
+			// display: inline-block;
+
+			a {
+				color: $base-color;
+				border-radius: 50%;
+				display: block;
+				font-weight: 400;
+				text-decoration: none;
+				width: 29px;
+				height: 29px;
+				line-height: 30px;
+				text-align: center;
+			}
+
+			&.pagination-next,
+			&.pagination-previous {
+                margin: 0 10px;
+                
+                    a {
+                    width: auto;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        stroke: $base-color;
+                    }
+                }
+			}
+
+			&:hover > a,
+            &.active > a {
+				color: $primary-color;
+
+                svg {
+                    stroke: $primary-color;
+                }
+			}
+
+			// &.active > a {
+			// 	background: $primary-color;
+			// 	color: $white;
+			// 	font-weight: 700;
+			// }
+		}
+	}
+}

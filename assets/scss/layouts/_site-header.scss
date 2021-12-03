@@ -1,0 +1,106 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+// Site Header
+  
+/* Site Header
+---------------------------------------------------------------------------- */
+
+.site-header {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 105px;
+    background-color: transparent;
+    padding: 0 $wrap_edge;
+    @include transition;
+
+    @include media('<=mobile_menu') {
+        align-items: center;
+    }
+
+    // Center verticaly the navigation on header shrink
+    &.shrink {
+        align-items: center;
+    }
+
+    &:not(.shrink)::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 137px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(33,35,36,.3);
+        background: linear-gradient(to bottom, #0f0e0e -19%, rgba(15, 14, 14, 0.5) 60%, rgba(15, 14, 14, 0) 99%);
+        transition: opacity .1s ease-in-out;
+        z-index: 1;
+    }
+
+    &::after { // clean the flex-flow 
+        content: none;
+    }
+ 
+    // Fixed grey header on scroll down (.shrink). 
+    &.shrink {
+        position: fixed;
+        height: 65px;
+        background-color: rgba($grey-dark, .9);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrap {
+        width: 100%;
+        max-width: $grid-width;
+        display: flex; 
+        align-items: center;
+        justify-content: space-between;
+
+        &::before,
+        &::after { // clean the flex-flow
+            content: none;
+        }
+    }
+
+    @include media('>=mobile_menu') {
+        
+        &:not(.shrink) {
+
+            .wrap {
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+  /* Admin Bar
+--------------------------------------------- */
+
+@include media(">=medium" ) {
+
+    .admin-bar { 
+
+        .site-container {
+            margin-top: 32px;
+        }
+
+        .site-header {
+            top: 32px;
+        }
+    }
+}
+
+// We don't work from mobile, so hide it
+@include media("<=medium") {
+    
+	#wpadminbar {
+		display: none !important;
+	}
+}

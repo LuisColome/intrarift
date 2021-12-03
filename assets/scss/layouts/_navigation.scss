@@ -1,0 +1,532 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Navigation 
+---------------------------------------------------------------------------------------------------- */
+
+.nav-menu {
+
+	& > * {
+		line-height: 0;
+	}
+
+	ul {
+		clear: both;
+		line-height: 1;
+		margin: 0;
+		width: 100%;
+	}
+
+	.menu-item {
+		list-style: none;
+		position: relative;
+        @include transition;
+
+        // General menu links styles
+		a {
+			border: none;
+			color: $white;
+			display: block;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.2;
+			padding: .63rem 1.30rem;
+			position: relative;
+			text-decoration: none;
+		}
+
+        .submenu-expand svg {
+            fill: $white;
+        }
+        
+        &:last-child a {
+            margin-right: 0;
+        }
+
+		&:hover {
+
+            // Chevron-down icon color
+            > a,
+            .submenu-expand svg {
+                fill: $primary-color;
+                color: $primary-color;
+            }
+        }
+
+		&.current-menu-item > a,
+		&.current-menu-ancestor > a {
+			color: $primary-color;
+		}
+
+        span {
+            display: inline-block;
+            text-decoration: none;
+            // padding-top: 5px;
+        }
+
+        a:focus,
+        a:hover,
+        .current-menu-item > a,
+        .sub-menu .current-menu-item > a:focus,
+        .sub-menu .current-menu-item > a:hover {
+          // color: brand-color( 'dark-green' );
+          text-decoration: none;
+      
+          span::after {
+              width: 100%;
+          }
+        }
+	}
+
+    // Special menu links
+    // Highlight icon and chevron-down icons first level
+    .menu-item {
+    
+        &.menu-item-has-children,
+        &.highlight {
+
+            a {
+			    padding-left: 2.2em
+            }
+        }
+    }
+
+    .submenu-expand,
+    .highlight-icon {
+		@include button-reset;
+		@include icon-position( 14px);
+		position: absolute;
+		line-height: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 18px;
+
+		// svg {
+		// 	fill: $base-color; // to fill the icon
+		// }
+	}
+
+    // Give color to the highlight icon
+    .highlight-icon svg {
+        fill: $primary-color;
+    }
+
+    .shrink & {
+        // do not display on shrink header.
+        .no-shrink {
+            display: none;
+        }
+
+        //
+        .nav-secondary {
+            margin-left: $margin_2x;
+        }
+    }
+
+    // Specific for Nav Secondary
+	.nav-secondary {
+
+        .menu-item {
+
+            a {
+                padding: 0;
+                font-size: 14px;
+                color: $grey_7;
+
+                &:hover,
+                &:focus {
+                    color: $primary-color;
+                }
+
+                &::after {
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 8px;
+                    color: $white;
+                }
+            }
+
+            // reset the menu-item background (line:46)
+            &:hover {
+                background-color: transparent;
+            }
+
+            &:last-child {
+                
+                a::after {
+                    content: none;
+                }
+            }
+
+            &.current-menu-item a {
+                color: $primary-color;
+            }
+
+            &:last-child {
+                margin-right: 1.30rem;
+            }
+        }
+	}
+
+	.nav-primary {
+
+		.menu-item.search {
+			line-height: 0;
+
+			button {
+				padding: 12px;
+			}
+		}
+	}
+
+    // Desktop menu 
+	@include media(">mobile_menu") {
+        width: auto;
+		display: flex;
+		flex-flow: column-reverse nowrap;
+        z-index: 4;
+
+        .shrink & {
+            flex-flow: row nowrap;
+            align-items: center;
+
+            // Align both navs on shrink.
+            .nav-secondary {
+                margin-top: 8px;
+            }
+        }
+
+		.nav-primary,
+		.nav-secondary {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.nav-secondary {
+			// margin-top: 10px;
+            margin-bottom: 6px;
+		}
+
+
+		.menu {
+			display: inline-block;
+			width: auto;
+		}
+
+        // Submenu on desktop screens.
+		.sub-menu {
+            visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			width: 215px;
+			z-index: 99;
+            transition: all 0.2s ease-in-out;
+
+			.menu-item {
+                padding: 0; // reset the <li> element padding
+                float: none;
+			    // background: $semi-grey-dark;
+
+                
+                a {
+                    font-size: 14px;
+                    line-height: 22px;
+                    padding: 0.95rem 1.2rem;
+                }
+
+                .sub-menu {
+                    // padding: 4px;
+
+                    .menu-item {
+                        padding: 0;
+
+                        a {
+                            font-size: 12px;
+                            padding: 0.42rem 1.1rem;
+                        }
+                    }
+                }
+
+                //first level of submenus on hover yellow background.
+				&:hover {
+                    & > a {
+					    background-color: $primary-color;
+                        color: $grey-dark;
+                    }
+
+                    .submenu-expand {
+    
+                        svg {
+                            fill: $grey-dark;
+                        }
+                    }
+				}
+
+                .submenu-expand {
+                    left: auto;
+                    right: 15px;
+                    transform: translateY(-50%) rotate(-90deg);
+
+                    svg {
+                        fill: $white;
+                    }
+                }
+			}
+
+            // Sedond level submenu. 
+			.sub-menu {
+                margin: -52px 0 0 215px;
+            }
+		}
+
+        // Destinos submenu. Styled as a mega menu. 
+        .destinos {
+
+            $submenu_height: 325px;
+
+            .sub-menu{
+                height: $submenu_height;
+                background: $semi-grey-dark;
+
+                & > .menu-item {
+                    max-height: 52px;
+                }
+
+                .continente {
+                
+                    // Destinos submenu 
+                    .sub-menu {
+                        display: flex;
+                        flex-flow: column wrap;
+                        width: 540px;
+                        height: $submenu_height;
+                        justify-content: left;
+                        background: $semi-grey-dark;
+                        padding: 5px;
+
+                        .menu-item {
+                            width: 180px;
+                            border-left: 1px solid $grey-base;
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                // Marcar la altura del segundo submenu sobre el primer elemmento.
+                // Esto lo podríamos hacer con nth-child para no usar clases pensando en futuros submenus y continentes.
+                .oceania {
+
+                    .sub-menu {
+                        margin: -104px 0 0 215px;
+                    }
+                }
+            }
+        }
+
+        // Submenu on hover
+		.menu-item {
+			float: left;
+                
+            &:hover {
+                background-color: $semi-grey-dark; // Item background color only on desktop.
+
+				& > .sub-menu {
+                    visibility: visible;
+					opacity: 1;
+                    transform: translateY(0px);
+                    @include transition;
+				}
+			}
+		}
+	}
+
+    // Mobile nav-menu
+	@include media("<=mobile_menu") {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        background: $semi-grey-dark;
+        // opacity: .92;
+        transition: all .3s ease-in-out;
+        padding: 105px $grid-gap 0;
+        overflow: auto;
+        z-index: 997;
+        display: flex;
+        flex-flow: column nowrap;
+
+		&.active {
+            right: 0;
+            overflow: auto;
+		}
+
+		.menu > .menu-item > a {
+			padding: 11px 18px;
+            font-size: 16px;
+		}
+
+        .nav-primary {
+            order: 2; // move the primary under the secondary menu.
+
+            // Add bottom line to primary menu on mobile.
+            .menu-item {
+                border-bottom: 1px solid $grey-medium;
+                margin-bottom: 4px;
+            }
+        }
+
+        // Move the nav secondary above the primary and with the items inline. 
+        .nav-secondary {
+            margin-bottom: $margin_2x;
+            .menu {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-end;
+
+                a {
+                    padding: 0;
+                }
+
+                // hide this items on mobile size screens.
+                .hide-on-mobile {
+                    display: none;
+                }
+            }
+        }
+
+		.submenu-expand {
+			top: 0;
+			right: 3%;
+            left: auto;
+			transform: none;
+			@include icon-position( 44px );
+
+			svg {
+				@include icon-position( 18px );
+			}
+
+			// &:not(.expanded) {
+			// 	transform: rotate(180deg);
+			// }
+
+			&.expanded {
+				transform: rotate(180deg);
+
+				& + .sub-menu {
+					display: block;
+				}
+			}
+		}
+
+        .menu-item {
+
+            &.highlight {
+                padding-left: 18px;
+
+                .highlight-icon {
+                    left: 16px;
+                }
+            }
+        }
+
+		.sub-menu {
+			display: none;
+			padding-left: 12px;
+
+            & > .menu-item > a {
+                font-size: 15px;
+                line-height: 1.4;
+            }
+		}
+	}
+}
+
+/* Toggles
+--------------------------------------------- */
+
+.menu-toggle {
+
+	&.active {
+
+		.close {
+			display: inline;
+		}
+
+		.open {
+			display: none;
+		}
+	}
+}
+
+.menu-toggle {
+	@include button-reset;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 18px;
+	line-height: 0;
+	text-align: center;
+    z-index: 999;
+	order: 3;
+
+    @include media(">mobile_menu") {
+        display: none; // Only display the toggle menu on mobile.
+    }
+	
+	.toggl__bar {
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		background: $white;
+		border-radius: 2em;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transform-origin: center;
+		transition: all .35s ease-in-out;
+
+		&.first {
+		    top: 0px;
+		}
+
+		&.second {
+		    top: 8px;
+		}
+
+		&.third {
+		    top: 16px;
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&.active {
+		background-color: transparent; // prevent button defaults
+	}
+
+	&.active {
+		background-color: transparent; // prevent button defaults
+
+		.toggl__bar {
+			background: $white;
+            height: 4px;
+
+			&.first {
+				top: 8px;
+				transform: rotate(135deg);
+			}
+
+			&.second {
+				transform: rotate(45deg);
+			}
+
+			&.third {
+				top: 8px;
+				transform: rotate(135deg);
+				opacity: 0;
+			}
+		}
+	}
+}

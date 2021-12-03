@@ -1,0 +1,188 @@
+@use "abstracts" as *;
+@use "../../vendor/include-media" as *;
+
+// Con
+.entry-content {
+
+    .full-width-content & {
+
+        .wp-block-kadence-tabs.alignfull {
+            //we make sure the tabs content take the full width.
+            padding: 0;
+
+            // add some interior margin and the backgroun color to the tabs
+            .kt-tabs-content-wrap {
+                background-color: $grey-base;
+                padding: $margin_2x 0;
+            }
+
+            // limit the width of the tab content.
+            .kt-tab-inner-content {
+                max-width: $content-width;
+                margin: 0 auto;
+            }
+        }
+
+        .wp-block-kadence-tabs {
+            
+            // Shadow behind active tab.
+            .kt-tabs-content-wrap {
+                box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            @include media('<=medium') {
+
+                .kt-tabs-title-list {
+
+                    .kt-title-item {
+                        margin: 0 8px 8px;
+
+                        a {
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Support for the grey brackground on the tabs
+.ruta-tabs .kt-tabs-content-wrap:before {
+    @include block-cover;
+    background-color:$grey_base;
+    z-index: -1;
+    margin: 0 calc(50% - 50vw);
+    max-width: 100vw;
+    width: 100vw;
+}
+
+
+// We add the orange stars and the G from Google to Google reviews. 
+// need to add the class "rv-google-review"
+.rv-google-review {
+
+    .kt-testimonial-item-wrap {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            width: 105px;
+            height: 22px;
+            background-image: url(/wp-content/uploads/stars.png);
+            background-size: cover;
+            z-index: 99;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 25px;
+            height: 25px;
+            background-image: url(/wp-content/uploads/google-logo.svg);
+            background-size: cover;
+            z-index: 99;
+        }
+    }
+}
+
+
+.entry-content {
+
+    // Paginación del carousel de imagenes. 
+    .kt-blocks-carousel {
+        
+        .slick-dots {
+            
+            li {
+                
+                button::before {
+                    background-color: #fff;
+                    opacity: .25;
+                }
+
+                button:hover::before {
+                    background-color: $primary-color;
+                    opacity: 1;
+                }
+
+                &.slick-active {
+                
+                    button::before {
+                        background-color: $primary-color;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    // Kadence testimonials.
+    .wp-block-kadence-testimonials {
+
+        .tns-outer {
+
+            .tns-nav {
+
+                &-active {
+    
+                    &::before {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+            .tns-controls {
+
+                button {
+                    background: transparent;
+                    opacity: .65;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &::before {
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+            }
+
+        }
+        
+    }
+}
+
+// Overlay dark background in Home page on the three temporadas Block.
+.wp-block-kadence-rowlayout {
+
+    .wp-block-kadence-column {
+
+        &.rv-temporadas-shadow {
+            position: relative;
+
+            &::before {
+                @include block-cover();
+                top: auto;
+                bottom: 0;
+                height: 157px;
+                z-index: 0;
+                background-image: linear-gradient(to bottom, rgba(15, 14, 14, 0) 2%, #0f0e0e 99%);
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+
+            .kt-inside-inner-col > * {
+                position: relative;
+                z-index: 2;
+
+            }
+        }
+    }
+}
