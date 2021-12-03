@@ -1,6 +1,6 @@
 # IntraRift Genesis Child Theme
 
-[![IntraRift Genesis Child Theme badge][changelog-badge]][changelog] [![Version 0.0.9 Badge][version-badge]][changelog]
+[![IntraRift Genesis Child Theme badge][changelog-badge]][changelog] [![Version 0.9.0 Badge][version-badge]][changelog]
 
 ## Author:
 
@@ -33,5 +33,5 @@ Without these projects, this WordPress Genesis Child Theme wouldn't be where it 
 * [Laragon](https://laragon.org/)
 
 [changelog]: ./CHANGELOG.md
-[changelog-badge]: https://img.shields.io/badge/Changelog-IntraRift%20Genesis%20Child%20Theme%20v0.0.9-orange
-[version-badge]: https://img.shields.io/badge/version-0.0.9-informational.svg
+[changelog-badge]: https://img.shields.io/badge/Changelog-IntraRift%20Genesis%20Child%20Theme%20v0.9.0-orange
+[version-badge]: https://img.shields.io/badge/version-0.9.0-informational.svg
