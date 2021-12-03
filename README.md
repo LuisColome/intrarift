@@ -8,7 +8,7 @@ Luis Colomé ( [@luiscolome](https://twitter.com/luiscolome) / [luiscolome.com](
 
 ## Summary
 
-Genesis Child Theme Rift-Valley.com intranet. Uses SCSS and PrePros to compile it. Tested up to WordPress 5.8.2 and Genesis 3.3.5.
+Genesis Child Theme for the Rift-Valley.com private intranet. Uses SCSS and PrePros to compile it. Tested up to WordPress 5.8.2 and Genesis 3.3.5.
 
 ## Usage
 
