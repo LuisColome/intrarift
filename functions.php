@@ -43,6 +43,9 @@ function lcm_global_enqueues() {
 	
 	// javascript
 	wp_enqueue_script( 'ea-global', get_stylesheet_directory_uri() . '/assets/js/global-min.js', array( 'jquery' ), filemtime( get_stylesheet_directory() . '/assets/js/global-min.js' ), true );
+
+    // Load the script only on Destinos taxonomy.
+    wp_enqueue_script( 'simple-tabs', get_stylesheet_directory_uri() . '/assets/js/simple-tabs-min.js', array( 'jquery' ), filemtime( get_stylesheet_directory() . '/assets/js/simple-tabs-min.js' ), true );
     
     if ( is_tax('destinos') ) {
         // Load the script only on Destinos taxonomy.
