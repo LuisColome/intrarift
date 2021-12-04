@@ -32,28 +32,28 @@
 @use "components/blocks-plugins/kadence-blocks";
 
 // -- Blocks custom
-@use "components/blocks-custom/incluye-list";
-@use "components/blocks-custom/leading-info";
-@use "components/blocks-custom/info-practica";
-@use "components/blocks-custom/salidas-precios";
-@use "components/blocks-custom/swiper-slider";
-@use "components/blocks-custom/timeline";
-@use "components/blocks-custom/member";
-@use "components/blocks-custom/phones";
+// @use "components/blocks-custom/incluye-list";
+// @use "components/blocks-custom/leading-info";
+// @use "components/blocks-custom/info-practica";''
+// @use "components/blocks-custom/salidas-precios";
+// @use "components/blocks-custom/swiper-slider";
+// @use "components/blocks-custom/timeline";
+// @use "components/blocks-custom/member";
+// @use "components/blocks-custom/phones";
 
 // Layouts
 @use "layouts/layout";
 @use "layouts/archive";
-@use "layouts/archive-epl";
+// @use "layouts/archive-epl";
 @use "layouts/archive-viajes";
-@use "layouts/archive-prensa";
+// @use "layouts/archive-prensa";
 @use "layouts/site-header";
 @use "layouts/site-title";
 @use "layouts/navigation";
 @use "layouts/sidebar";
 @use "layouts/singular";
-@use "layouts/tax-destinos";
-@use "layouts/hero";
+@use "layouts/custom_tabs";
+// @use "layouts/hero";
 @use "layouts/entry-content";
 @use "layouts/entry-meta";
 @use "layouts/post-summary";
@@ -61,7 +61,7 @@
 @use "layouts/widgets";
 // @use "layouts/gutenberg";
 @use "layouts/forms";
-@use "layouts/hidden";
+// @use "layouts/hidden";
 @use "layouts/site-footer";
 
 @use "vendor/include-media";
