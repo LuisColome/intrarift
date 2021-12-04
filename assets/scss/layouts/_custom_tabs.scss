@@ -1,0 +1,174 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/**
+ * Taxonomy Destinos archive page
+------------------------------------------------------------------------------ */
+
+/* Custom tabs on Destinos taxonomy pages
+------------------------------------------------------------------------------ */
+.full-width-content {
+
+    .rv-tabs {
+        
+        // Make sure custom tabs content are full width.
+        &.alignfull {
+            margin: calc( 2 * 20px ) calc(50% - 50vw);
+            max-width: 100vw;
+            width: 100vw;
+            padding: 0 !important;
+        }
+    }
+
+    // Tabs keep the alignconent width.
+    .tabs {
+        max-width: $content-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Tabs wrap
+-------------------------------------------- */
+.rv-tabs__wrap {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Tabs
+-------------------------------------------- */
+.tabs {
+    width: 100%;
+    max-width: $content-width;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    // Fixed tabs to top (no floating) from 800px.
+    @include media('>=small') {
+        flex-flow: row nowrap;
+    }
+
+    .tab {
+        padding: 0;
+        margin: 10px; // Space between tabs
+        flex-grow: 1;
+
+        // let the tabs grow on small screens
+        @include media('>=small') {
+            max-width: max-content;
+        }
+        
+        // No floating tabs from 800px
+        @include media('>=small'){
+            margin: 0 10px 0 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        
+        &__link {
+            border-radius: $border-radius;
+            padding: .5em 2em;
+            display: block;
+            background-color: #4e4c4c;
+            text-decoration: none;
+            
+            // No floating tabs from 800px
+            @include media('>=small'){
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            &.active {
+                position: relative;
+                z-index: 2;
+            }
+            
+            &:hover,
+            &:focus, 
+            &.active {
+                background-color: $grey-base;
+
+                .tab__icon svg {
+                    fill: $primary-color;
+                }
+
+                .tab__title {
+                    color: $primary-color;
+                }
+            }
+        }
+        
+        &__link__wrap {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            min-height: 38px;
+        }
+        
+        &__title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.32;
+            color: $white;
+            text-transform: uppercase;
+            @include transition();
+        }
+
+        &__icon {
+            display: none;
+
+            @include media('>=small') {
+
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin-right: 5px;
+            
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+
+/* Tabs content - .tabgroup
+-------------------------------------------- */
+.tabgroup {
+    background-color: $grey-base;
+    box-shadow:0 -3px 10px rgba(0,0,0,.3);
+    position: relative;
+    padding: $margin_2x $wrap_edge;
+
+    // Tab content center and content width.
+    .tabcontent {
+        max-width: $content-width;
+        margin: 0 auto;
+    }
+}
+
+
+/* Contact block
+-------------------------------------------- */
+.contact {
+    background-color: $primary-color;
+    margin: 0 calc(50% - 50vw);
+    max-width: 100vw;
+    width: 100vw;
+    padding: $margin_2x 1.375rem;
+
+    &__wrap {
+        width: 100%;
+        max-width: 768px;
+        margin: $block-margin auto;
+    }
+
+}
