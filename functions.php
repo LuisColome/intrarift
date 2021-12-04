@@ -17,6 +17,22 @@
 if ( ! isset( $content_width ) )
 	$content_width = 985;	
 
+/**
+ * Make the site private redirecting ant logged out user to login screen.
+ * 
+ */
+function make_wordpress_site_private(){
+
+    global $wp;
+
+    if (!is_user_logged_in() && $GLOBALS['pagenow'] !== 'wp-login.php'){
+        wp_redirect(wp_login_url($wp -> request));
+        exit;
+    }
+}
+add_action('wp', 'make_wordpress_site_private');
+
+
  /**
  * Global enqueues
  *
@@ -84,7 +100,6 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/markup.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
 	include_once( get_stylesheet_directory() . '/inc/helper-functions.php' );
-	include_once( get_stylesheet_directory() . '/inc/after-posts.php' );
 
     // Plugin Support
 	include_once( get_stylesheet_directory() . '/inc/acf.php' );
