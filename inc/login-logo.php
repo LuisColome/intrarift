@@ -32,9 +32,10 @@ function ea_login_logo() {
     ?>
     <style type="text/css">
 
-        .login {
+        body.login {
             font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             color: #acacac;
+            background: #272626 url(/wp-content/themes/intrarift/images/dunas.jpg);
         }
         
         #login {
@@ -44,7 +45,7 @@ function ea_login_logo() {
         .login form {
             border: 2px solid #d89100;
             border-radius: 10px;
-            background: #272626;
+            background: #272626 url(<?php get_stylesheet_directory() ?>);
         }
 
         .login h1::after {
