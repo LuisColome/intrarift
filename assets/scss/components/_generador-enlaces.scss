@@ -1,0 +1,65 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Generador de enlaces
+-------------------------------------------- */
+
+
+.gdlg {
+    
+    &-panel {
+        border: 1px solid #cacaca;
+        border-radius: 5px; 
+        padding: 2.5rem 2.5rem 1rem;
+    }
+
+    form{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    }
+}
+
+.gdlg-form-group {
+    height: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+
+    input {
+        padding: 1rem 1rem .6rem;
+        border: none;
+        border-radius: 4px;
+    }
+}
+.gdlg-panel-body label {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.gdlg-input-group {
+    display: flex;
+    flex-flow: row nowrap;
+
+    input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 100%;
+    }
+
+    .gdlg__btn:disabled {
+        background-color: #bababa;
+        color: #666666;
+    }
+
+    .gdlg__btn {
+        width: max-content;
+        height: 50px;
+        padding: .7rem 2rem;
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: $primary-color;
+    }
+}

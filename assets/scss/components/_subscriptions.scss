@@ -1,0 +1,22 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Subscribe block
+-------------------------------------------- */
+
+.full-width-content {
+
+    .subscribe {
+        background-color: $grey-base;
+        margin: 0 calc(50% - 50vw);
+        max-width: 100vw;
+        width: 100vw;
+        padding: $margin_2x 1.375rem;
+
+        &__wrap{
+            width: 100%;
+            max-width: 540px;
+            margin: $block-margin auto;
+        }
+    }
+}
