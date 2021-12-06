@@ -1,9 +1,9 @@
 {
-    "key": "group_5d710fe4378e3",
-    "title": "Viajes - custom fields",
+    "key": "group_61ade04b58c40",
+    "title": "Paises - custom fields",
     "fields": [
         {
-            "key": "field_615ece4c2aafd",
+            "key": "field_61ae22dfc89e8",
             "label": "Paquetes descargables",
             "name": "",
             "type": "tab",
@@ -19,9 +19,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_61ac7dba5d9a7",
-            "label": "RUTA paquete",
-            "name": "intra_ruta_download",
+            "key": "field_61aded551b0f2",
+            "label": "FOTOS Paquete",
+            "name": "intra_destino_fotos_download",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -34,39 +34,9 @@
             "return_format": "url"
         },
         {
-            "key": "field_61ac7e365d9a8",
-            "label": "FOTOS paquete",
-            "name": "intra_pictures_download",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url"
-        },
-        {
-            "key": "field_61ac7e5f7f493",
-            "label": "VIDEOS paquete",
-            "name": "intra_videos_download",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url"
-        },
-        {
-            "key": "field_61ac801ea9384",
-            "label": "FECHAS paquete",
-            "name": "intra_dates_download",
+            "key": "field_61aded96197e0",
+            "label": "VIDEOS Paquete",
+            "name": "intra_destino_videos_download",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -84,12 +54,12 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "viajes"
+                "value": "pais"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "acf_after_title",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -97,5 +67,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1638785144
+    "modified": 1638802174
 }
