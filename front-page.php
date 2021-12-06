@@ -63,14 +63,16 @@ function lcm_intranet_custom_tabs() {
                 <!-- Tab content RUTAS -->
                 <div class="tabcontent" id="tab1">
 
-                <div class="fwp-filters">
-                    <?php echo facetwp_display( 'facet', 'destinos' ); ?>
-                    <?php //echo facetwp_display( 'facet', 'experiencias' ); ?>
-                </div>
+                    <div class="fwp-filters">
+                        <?php echo facetwp_display( 'facet', 'destinos' ); ?>
+                        <?php echo facetwp_display( 'facet', 'tipo' ); ?>
+                        <?php echo facetwp_display( 'facet', 'temporadas' ); ?>
+                        <?php echo facetwp_display( 'facet', 'estado' ); ?>
+                    </div>
 
-                <div class="fwp-content">
-                    <?php echo facetwp_display( 'template', 'viajes_rutas' ); ?>
-                </div>
+                    <div class="fwp-content">
+                        <?php echo facetwp_display( 'template', 'viajes_rutas' ); ?>
+                    </div>
                     
                 </div>
 
@@ -80,7 +82,43 @@ function lcm_intranet_custom_tabs() {
                 <!-- Tab content PAISES -->
                 <div class="tabcontent" id="tab2">
                     
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, facere libero ipsum enim enetur ratione quaerat cupiditate ea id laboriosam fugiat harum necessitatibus suscipit distinctio officia, iusto exercitationem dicta et!</p>
+                    <?php 
+                    global $post;
+
+                    $args = array(
+                        'post_type'         => 'pais',
+                        'posts_per_page'    => -1,
+                        'order'             => 'ASC',
+                        'orderby'           => 'date',
+                        'post_status'       => 'publish',
+                    );
+                    
+                    $loop = new WP_Query($args); // Run the first Query
+                    
+                    if ( $loop->have_posts() ) : ?>
+                        <section class="lcm-posts grid viajes">
+
+                                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                
+                                <div class="swiper-slide">
+                                <?php 
+                                // we use the partial archive.php to create the archive loops
+                                get_template_part( 'partials/' . 'archive', 'paises' ); ?>
+                                </div>
+                    
+                                <?php endwhile; ?>
+                    
+                        </section>
+                    
+                        <!-- Swiper pagination -->
+                        <div class="swiper-pagination__wrap">
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination destacados"></div>
+                        </div>
+                    
+                        </div>
+                    <?php endif;
+                    wp_reset_query(); ?>
 
                 </div>
 
