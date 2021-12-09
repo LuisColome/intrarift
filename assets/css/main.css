@@ -2053,6 +2053,16 @@ hr:not(.kt-divider)::before {
     display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: 182px 61px;
+    grid-template-rows: 182px 61px;
+}
+.viaje__main > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+.viaje__main > *:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
 }
 .viaje__content {
     font-size: 16px;
