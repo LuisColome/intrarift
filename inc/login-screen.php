@@ -24,7 +24,7 @@ add_filter( 'login_headertext', '__return_empty_string' );
  */
 function ea_login_logo() {
 
-	$logo_path = '/assets/images/logo.png';
+	$logo_path = '/images/logo.svg';
     $bg_path = '/assets/images/bg.jpg';
 
 	$logo = get_stylesheet_directory_uri() . $logo_path;
