@@ -89,3 +89,13 @@ jQuery(document).ready(function($){
     });
 
 });
+
+jQuery(document).ready(function($){
+
+    $(function () {
+        $('.alert__close').on('click', function() {
+            $(this).parent('.alert').hide();
+        });
+    });
+
+});

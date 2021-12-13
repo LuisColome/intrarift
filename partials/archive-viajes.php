@@ -65,10 +65,47 @@
         </div><!-- End viaje__header -->
 
         <!-- Viaje Main -->
+        <?php 
+        // We get the type and state taxonomy terms.
+        $type_terms = get_the_terms( $post->ID, 'tipo');
+        $estate_terms = get_the_terms( $post->ID, 'estado');
+        if( $type_terms || $estate_terms ) {
+        ?>
+        <div class="viaje__main viaje__main__withtags">
+        <?php }else{ ?>
         <div class="viaje__main">
+        <?php }?> 
 
             <!-- Viaje Content -->
             <div class="viaje__content">
+
+            
+
+                <div class="viaje__tags">
+                <?php 
+                // Display type taxonomy terms. 
+                if ( $type_terms && ! is_wp_error( $type_terms ) ) { ?>
+                    <?php 
+                    foreach($type_terms as $type_term) {
+                        if( $type_term->slug === 'viaje-en-grupo'){
+                            echo '<span class="viaje__tag viaje__tag__red">' . $type_term->name . '</span>';
+                        }else {
+                            echo '<span class="viaje__tag viaje__tag__green">' . $type_term->name . '</span>';
+                        }
+                    } ?>
+                <?php
+                } 
+                
+                // Display state taxonomy terms. 
+                $estate_terms = get_the_terms( $post->ID, 'estado'); 
+                if ( $estate_terms && ! is_wp_error( $estate_terms ) ) { ?>
+                    <?php 
+                    foreach($estate_terms as $estate_term) {
+                        echo '<span class="viaje__tag viaje__tag__confirmed">' . $estate_term->name . '</span>';
+                    } ?>
+                <?php
+                }?>
+                </div>
 
                 <ul class="viaje__intralinks">
 
@@ -137,9 +174,15 @@
             </div> <!-- End viaje__content -->
             
             <!-- Viaje Footer -->
+            <?php 
+            $full_link = get_field('intra_full_download');
+            if( $full_link) : ?>
+            
             <div class="viaje__footer">
-                <a class="viaje__read-more-link wp-block-button__link" href="#" rel="nofollow" tabindex="-1" aria-hidden="true"><?php _e('Descargar paquete completo', 'intrarift') ?></span></a>
+                <a class="viaje__read-more-link wp-block-button__link" href="<?php echo esc_url($full_link) ?>" rel="nofollow" tabindex="-1" aria-hidden="true"><?php _e('Descargar paquete completo', 'intrarift') ?></span></a>
             </div> <!-- End viaje__footer -->
+            
+            <?php endif; ?>
                 
         </div><!-- End viaje__body -->
 

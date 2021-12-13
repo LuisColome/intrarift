@@ -73,7 +73,7 @@ function ea_login_logo() {
         }
 
         .login h1::after {
-            content: 'Intranet';
+            content: 'Agencias';
             color: white;
             margin-bottom: 15px;
         }
@@ -96,7 +96,8 @@ function ea_login_logo() {
             border-radius: 6px;
         }
 
-        .wp-core-ui .button-primary:hover {
+        .wp-core-ui .button-primary:hover,
+        .wp-core-ui .button-primary:focus {
             background: #c28300;
             border-color: #c28300;
             color: #272626;

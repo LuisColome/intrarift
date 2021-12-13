@@ -1,0 +1,48 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Notifications
+-------------------------------------------- */
+
+.alert {
+    display: grid;
+    grid-template-columns: 30px 1fr 40px;
+    gap: $grid-gap;
+    align-items: center;
+    position: relative;
+    border-radius: $border-radius;
+    color: $white;
+    background-color: $primary-color;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 1rem 2rem;
+
+    &__icon {
+        
+        svg {
+            vertical-align: middle;
+        }
+    }
+
+    &__message {
+        display: inline-block;
+        font-size: 1.12rem;
+        font-weight: 600;
+    }
+
+    &__close {
+        background-color: transparent;
+        border: none;
+        font-size: 2em;
+        color: $grey_3;
+        cursor: pointer;
+
+        &:hover {
+          color: inherit;
+        }
+
+        svg {
+            vertical-align: middle;
+        }
+    }
+}

@@ -94,11 +94,16 @@
                 </ul>
 
             </div> <!-- End pais__content -->
+
+            <?php 
+            $full_link = get_field('intra_destino_full_download');
+            if( $full_link) : ?>
             
-            <!-- Viaje Footer -->
             <div class="pais__footer">
-                <a class="pais__read-more-link wp-block-button__link" href="#" rel="nofollow" tabindex="-1" aria-hidden="true"><?php _e('Descargar paquete completo', 'intrarift') ?></span></a>
-            </div> <!-- End pais__footer -->
+                <a class="pais__read-more-link wp-block-button__link" href="<?php echo esc_url($full_link) ?>" rel="nofollow" tabindex="-1" aria-hidden="true"><?php _e('Descargar paquete completo', 'intrarift') ?></span></a>
+            </div> <!-- End viaje__footer -->
+            
+            <?php endif; ?>
                 
         </div><!-- End pais__body -->
 

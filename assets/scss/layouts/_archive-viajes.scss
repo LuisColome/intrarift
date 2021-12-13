@@ -88,7 +88,11 @@
         padding: 3px 15px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 182px 61px;
+        // grid-template-rows: 182px 61px;
+
+        &__withtags {
+            margin-top: .8rem;
+        }
     }
 
     &__content {
@@ -129,19 +133,32 @@
 
 
     // Experiencias taxonomy as no linked tags.
-    &__experiencias {
+    &__tags {
         display: flex;
         flex-flow: row wrap;
-        margin-top: auto;
+        justify-content: center;
+        margin-top: -1.3rem;
     }
 
-    &__experiencia {
-        font-size: 9px;
-        text-transform: uppercase;
-        padding: .5ch 2ch;
+    &__tag {
+        font-size: .9rem;
+        font-weight: 600;
+        padding: .22rem .8rem;
         background-color: $grey_base;
         border-radius: 3.6px;
-        margin: 0 4px 4px 0;
+        margin: 4px;
+
+        &__red {
+            background-color: $rift-red;
+        }
+
+        &__green {
+            background-color: $rift-green;
+        }
+
+        &__confirmed {
+            background-color: $grey-medium;
+        }
     }
 
 
@@ -152,13 +169,6 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-    }
-
-    &__dias,
-    &__precio {
-        font-size: 16px;
-        font-weight: 700;
-        color: $white;
     }
 
     &__read-more-link.wp-block-button__link {

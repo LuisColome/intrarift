@@ -322,3 +322,27 @@ function lcm_cpt_posts_per_page($query)
     }
 }
 add_filter( 'pre_get_posts', 'lcm_cpt_posts_per_page' );
+
+/**
+ * Display Admin bar only to Administrators.
+ * 
+ */
+function remove_admin_bar() {
+    if (current_user_can('subscriber')) {
+        show_admin_bar(false);
+    }
+}
+add_action('after_setup_theme', 'remove_admin_bar');
+
+
+/**
+ * Hide Dashboard from subscribers.
+ * 
+ */
+function disable_dashboard() {
+    if (current_user_can('subscriber') && is_admin()) {
+        wp_redirect(home_url());
+        exit;
+    }
+}
+add_action('admin_init', 'disable_dashboard');

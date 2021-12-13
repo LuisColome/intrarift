@@ -11,10 +11,43 @@
 // Full width layout
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
-// Remove post title area
-// remove_action( 'genesis_entry_header', 'genesis_do_post_title'                 );
-remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open',  5  );
-remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+/**
+ * Notifications above title. 
+ * 
+ */
+function lcm_intrarift_notifications(){
+	
+    // Check rows exists.
+    if( have_rows('intra_notifications', 'option') ):
+
+        // Loop through rows.
+        while( have_rows('intra_notifications', 'option') ) : the_row();
+
+            $message = get_sub_field('intra_notification'); ?>
+            <div class="alert alert-success">
+                <span class="alert__icon">
+                    <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.65 19.012 23.4 16.75v-5.575a8.575 8.575 0 0 0-7.275-8.6A8.425 8.425 0 0 0 6.6 10.912v5.838l-2.25 2.262A2.05 2.05 0 0 0 5.8 22.5H10v.425a4.8 4.8 0 0 0 5 4.575 4.8 4.8 0 0 0 5-4.575V22.5h4.2a2.05 2.05 0 0 0 1.45-3.488zm-8.15 3.913A2.35 2.35 0 0 1 15 25a2.35 2.35 0 0 1-2.5-2.075V22.5h5v.425zM6.887 20l1.476-1.475A2.5 2.5 0 0 0 9.1 16.75v-5.838a5.913 5.913 0 0 1 2.025-4.45A5.838 5.838 0 0 1 15.8 5a6.075 6.075 0 0 1 5.1 6.125v5.625a2.5 2.5 0 0 0 .725 1.775L23.113 20H6.887z" fill="#FFF" fill-rule="evenodd"/>
+                    </svg>
+                </span>
+                <span class="alert__message"><?php echo $message ?></span>
+                <button class="alert__close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m12 2 .28.004C17.673 2.152 22 6.57 22 12l-.004.28C21.848 17.673 17.43 22 12 22 6.477 22 2 17.523 2 12S6.477 2 12 2zm0 2a8 8 0 1 0 0 16l.25-.004A8 8 0 0 0 20 12l-.004-.25A8 8 0 0 0 12 4zm1.296 5.284a1 1 0 0 1 1.414.006l.006.006a1 1 0 0 1-.006 1.414L13.41 12l1.3 1.29a1.002 1.002 0 0 1 0 1.42l-.003.003a1 1 0 0 1-1.417-.003L12 13.41l-1.29 1.3a1.002 1.002 0 0 1-1.42 0l-.003-.003a1 1 0 0 1 .003-1.417l1.3-1.29-1.3-1.29-.084-.095A1.004 1.004 0 0 1 10.71 9.29l1.29 1.3 1.29-1.3.006-.006z" fill="#FFF" fill-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <?php
+
+        // End loop.
+        endwhile;
+
+    // No value.
+    else :
+        // Do something...
+    endif;
+}
+add_action( 'genesis_before_loop', 'lcm_intrarift_notifications', 20 );
 
 
 /**
@@ -100,11 +133,9 @@ function lcm_intranet_custom_tabs() {
 
                                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                                 
-                                <div class="swiper-slide">
                                 <?php 
                                 // we use the partial archive.php to create the archive loops
                                 get_template_part( 'partials/' . 'archive', 'paises' ); ?>
-                                </div>
                     
                                 <?php endwhile; ?>
                     
@@ -132,5 +163,21 @@ function lcm_intranet_custom_tabs() {
     <?php
 }
 add_action( 'genesis_after_entry_content', 'lcm_intranet_custom_tabs' );
+
+/**
+ * Suscription Mailchimp module after content
+ * 
+ */
+function lcm_intranet_subscription_module(){
+	
+    ?>
+    <div class="swiper-slide">
+    <?php 
+    // we use the partial archive.php to create the archive loops
+    get_template_part( 'partials/' . 'subscriptions' ); ?>
+    </div>
+    <?php
+}
+add_action( 'genesis_after_entry_content', 'lcm_intranet_subscription_module', 22 );
 
 genesis();

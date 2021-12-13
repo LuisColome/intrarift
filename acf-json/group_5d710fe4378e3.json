@@ -77,6 +77,21 @@
                 "id": ""
             },
             "return_format": "url"
+        },
+        {
+            "key": "field_61b1da9c3bbef",
+            "label": "Paquete COMPLETO",
+            "name": "intra_full_download",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
         }
     ],
     "location": [
@@ -97,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1638785144
+    "modified": 1639046024
 }
