@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) ([Spanish version](https://keepachangelog.com/es-ES/1.0.0/)),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) (or at least I'll try to).
 
+### [1.2.0](https://github.com/LuisColome/intrarift/releases/tag/v1.2.0) - 2021-12-21
+#### Added
+- Status tab and excell iframe inside it.
+#### Updated
+- 'Tipo de viaje' tag with smaller font-size
+- Centered footer info
+- Site footer info.
+#### Removed 
+- 'Estado' taxonnmy tags from viajes loops.
+
 ### [1.0.0](https://github.com/LuisColome/intrarift/releases/tag/v1.0.0) - 2021-12-13
 #### Added
 - Styles for the login screen
