@@ -13,11 +13,11 @@
  */
 function lcm_site_footer() {
 	echo '<div class="footer-left">';
-		echo '<p class="copyright">Copyright &copy; ' . date( 'Y' ) . ' ' . get_bloginfo( 'name' ) . ' ®. All Rights Reserved.</p>';
+		echo '<p class="copyright">Copyright &copy; ' . date( 'Y' ) . ' ' . get_bloginfo( 'name' ) . ' ®. All Rights Reserved.</p> <a href="' . wp_logout_url( home_url() ) . '">Log out</a>';
 	echo '</div>';
 	// echo '<a class="backtotop" href="#">Back to top' . ea_icon( array( 'icon' => 'arrow-up' ) ) . '</a>';
 }
-//add_action( 'genesis_footer', 'lcm_site_footer' );
+add_action( 'genesis_footer', 'lcm_site_footer' );
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 
 /**
