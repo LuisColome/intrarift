@@ -153,6 +153,21 @@
         max-width: $content-width;
         margin: 0 auto;
     }
+
+    // Google sheet
+    .rv__sheet {
+        width:100%;
+        
+        iframe {
+            width: 100%;
+            max-width: 985px;
+            margin: 0 auto;
+            min-height: 960px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border: 2px solid $primary-color;
+        }
+    }
 }
 
 
