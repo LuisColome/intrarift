@@ -1,8 +1,16 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) ([Spanish version](https://keepachangelog.com/es-ES/1.0.0/)),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) (or at least I'll try to).
+
+### [1.2.1](https://github.com/LuisColome/intrarift/releases/tag/v1.2.1) - 2021-12-22
+#### Added
+- Meses filter to Viajes tab
+#### Fixed
+- STATUS tab icon
+- Country info icon on Viajes
 
 ### [1.2.0](https://github.com/LuisColome/intrarift/releases/tag/v1.2.0) - 2021-12-21
 #### Added
@@ -11,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 'Tipo de viaje' tag with smaller font-size
 - Centered footer info
 - Site footer info.
-#### Removed 
+#### Removed
 - 'Estado' taxonnmy tags from viajes loops.
 
 ### [1.0.0](https://github.com/LuisColome/intrarift/releases/tag/v1.0.0) - 2021-12-13
@@ -27,13 +35,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Logo for SVG version on Login screen
 #### Updated
 - Custom fields to match the needs of the intranet compare to the main site
-- Site width to 1000px 
+- Site width to 1000px
 #### Removed
 - Useless code
 - Useless files
 
-
-
 ### [0.9.0] - 2021-12-03
 #### Added
-- Initial Upload.
+- Initial Upload. 
