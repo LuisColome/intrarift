@@ -111,7 +111,7 @@ function lcm_intranet_custom_tabs() {
                     <div class="fwp-filters">
                         <?php echo facetwp_display( 'facet', 'destinos' ); ?>
                         <?php echo facetwp_display( 'facet', 'tipo' ); ?>
-                        <?php //echo facetwp_display( 'facet', 'meses' ); ?>
+                        <?php echo facetwp_display( 'facet', 'meses' ); ?>
                         <?php //echo facetwp_display( 'facet', 'estado' ); ?>
                     </div>
 
