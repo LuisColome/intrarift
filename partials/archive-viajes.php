@@ -155,7 +155,7 @@
                     <?php endif; ?>
                     
                     <?php 
-                    $dates_link = get_field('intra_dates_download');
+                    $dates_link = get_field('intra_country_info_download');
                     if( $dates_link) : ?>
                     <li class="viaje__intralink">
                         <a href="<?php echo esc_url($dates_link) ?>" class="viaje__intralink__link">
