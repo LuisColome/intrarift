@@ -65,8 +65,8 @@
         },
         {
             "key": "field_61ac801ea9384",
-            "label": "FECHAS paquete",
-            "name": "intra_dates_download",
+            "label": "Info PÁIS paquete",
+            "name": "intra_country_info_download",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -112,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639046024
+    "modified": 1640364449
 }

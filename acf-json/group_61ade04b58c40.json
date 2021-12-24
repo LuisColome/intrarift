@@ -49,6 +49,36 @@
             "return_format": "url"
         },
         {
+            "key": "field_61c5f2d4f8cd8",
+            "label": "Info PAÍS paquete",
+            "name": "intra_destino_info_download",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
+            "key": "field_61c5f14536289",
+            "label": "Info PRÁCTICA PAÍS paquete",
+            "name": "intra_destino_info_practica_download",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
             "key": "field_61b1daf3f5130",
             "label": "Paquete COMPLETO",
             "name": "intra_destino_full_download",
@@ -82,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639045908
+    "modified": 1640362726
 }
