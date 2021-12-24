@@ -2245,7 +2245,7 @@ hr:not(.kt-divider)::before {
     grid-template-columns: 1fr;
 }
 .pais__content {
-    font-size: 16px;
+    font-size: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
