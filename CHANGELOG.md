@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [1.2.1](https://github.com/LuisColome/intrarift/releases/tag/v1.2.1) - 2021-12-22
 #### Added
+- Two new download links to Pais partial for Country info.
+#### Update
+- Info Country custom fields
+- Fechas link on Viajes partial to Info Link
+- Smaller link font size on paises partial.
+
+### [1.2.1](https://github.com/LuisColome/intrarift/releases/tag/v1.2.1) - 2021-12-22
+#### Added
 - Meses filter to Viajes tab
 #### Fixed
 - STATUS tab icon
