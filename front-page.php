@@ -197,6 +197,6 @@ function lcm_intranet_subscription_module(){
     </div>
     <?php
 }
-add_action( 'genesis_after_entry_content', 'lcm_intranet_subscription_module', 22 );
+//add_action( 'genesis_after_entry_content', 'lcm_intranet_subscription_module', 22 );
 
 genesis();
