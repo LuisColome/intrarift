@@ -3643,6 +3643,89 @@ textarea:focus:-ms-input-placeholder {
     fill: #ffac02;
 }
 
+/* Profile Builder forms
+------------------------------------------------------------------------------ */
+.entry-content .wppb-user-forms input[type=text],
+.entry-content .wppb-user-forms input[type=number],
+.entry-content .wppb-user-forms input[type=email],
+.entry-content .wppb-user-forms input[type=url],
+.entry-content .wppb-user-forms input[type=password],
+.entry-content .wppb-user-forms input[type=search],
+.entry-content .wppb-user-forms textarea {
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+.entry-content .wppb-form-field.wppb-send-credentials-checkbox {
+    margin: 32px 0;
+}
+.entry-content .wppb-form-field.wppb-send-credentials-checkbox label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.entry-content .wppb-user-forms .form-submit {
+    margin: 1.375rem 0;
+}
+.entry-content .wppb-user-forms .form-submit .submit {
+    background-color: #d89100;
+    border: 2px solid #d89100;
+    border-radius: 3px;
+    color: #272626;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 32px;
+    padding: 0.6ch 2.1ch;
+    text-decoration: none;
+    cursor: pointer;
+}
+.entry-content .wppb-user-forms .form-submit .submit:hover, .entry-content .wppb-user-forms .form-submit .submit:focus {
+    border: 2px solid #ffac02;
+    background-color: #ffac02;
+}
+.entry-content .wppb-form-field input[type=checkbox] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: #1d1b1b;
+    border: 2px solid #acacac;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+.entry-content .wppb-form-field input[type=checkbox]:active, .entry-content .wppb-form-field input[type=checkbox]:checked:active {
+    border-color: #d89100;
+}
+.entry-content .wppb-form-field input[type=checkbox]:checked {
+    border-color: #d89100;
+}
+.entry-content .wppb-form-field input[type=checkbox]:checked::after {
+    content: "✔";
+    font-size: 14px;
+    position: absolute;
+    top: -4px;
+    left: 3px;
+    color: #d89100;
+}
+.entry-content #select_user_to_edit_form .wppb-form-field {
+    max-width: 900px;
+}
+
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
