@@ -2114,7 +2114,8 @@ hr:not(.kt-divider)::before {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 2% 0;
+    padding: 2%;
+    margin-bottom: 16px;
     background-color: #141212;
     border-radius: 10px;
     padding: 0.3rem 0.55rem;
@@ -2174,7 +2175,7 @@ hr:not(.kt-divider)::before {
     background-color: #4e4c4c;
 }
 .viaje__footer {
-    padding: 16px 0;
+    margin-bottom: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2257,6 +2258,7 @@ hr:not(.kt-divider)::before {
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding: 2% 0;
+    margin-bottom: 16px;
 }
 .pais__intralinks {
     list-style: none;
@@ -2286,7 +2288,7 @@ hr:not(.kt-divider)::before {
     height: 26px;
 }
 .pais__footer {
-    padding: 16px 0;
+    margin-bottom: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

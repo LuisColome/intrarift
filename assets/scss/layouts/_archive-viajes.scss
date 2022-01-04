@@ -100,7 +100,8 @@
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
-        padding: 2% 0;
+        padding: 2%;
+        margin-bottom: 16px;
         background-color: #141212;
         border-radius: $border-radius;
         padding: .3rem .55rem;
@@ -164,7 +165,7 @@
 
     // Foofer at the Viajesloop
     &__footer {
-        padding: 16px 0;
+        margin-bottom: 16px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;

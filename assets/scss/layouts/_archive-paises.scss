@@ -71,6 +71,7 @@
         flex-flow: column nowrap;
         justify-content: flex-start;
         padding: 2% 0;
+        margin-bottom: 16px;
     }
 
     &__intralinks {
@@ -104,7 +105,7 @@
 
     // Foofer at the Viajesloop
     &__footer {
-        padding: 16px 0;
+        margin-bottom: 16px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
