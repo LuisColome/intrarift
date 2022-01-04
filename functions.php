@@ -30,7 +30,7 @@ function make_wordpress_site_private(){
         exit;
     }
 }
-add_action('wp', 'make_wordpress_site_private');
+//add_action('wp', 'make_wordpress_site_private');
 
 
  /**
