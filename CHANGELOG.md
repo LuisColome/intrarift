@@ -5,7 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) ([Spanish version](https://keepachangelog.com/es-ES/1.0.0/)),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) (or at least I'll try to).
 
-### [1.2.1](https://github.com/LuisColome/intrarift/releases/tag/v1.2.1) - 2021-12-22
+### [1.2.4](https://github.com/LuisColome/intrarift/releases/tag/v1.2.4) - 2021-12-22
+#### Fixed 
+- Redability on alert messages on Profile Builder
+
+### [1.2.3](https://github.com/LuisColome/intrarift/releases/tag/v1.2.3) - 2021-12-22
+#### Added
+- Support for Profile Builder plugin
+#### Upadted
+- Deactivate redirect to login screen
+#### Fixed
+- The word "Videos" for "Vídeo" on loops
+- Space between elemnts on loops items.
+#### Removed
+- Suscription block from front page
+
+### [1.2.2](https://github.com/LuisColome/intrarift/releases/tag/v1.2.2) - 2021-12-22
 #### Added
 - Two new download links to Pais partial for Country info.
 #### Update
