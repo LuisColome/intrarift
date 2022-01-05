@@ -167,4 +167,18 @@ textarea {
             max-width: 900px;
         }
     }
+
+    // Cambiando colores de los mensajes de alerta.
+    .alert.wppb-success {
+        background: #398e0e;
+    }
+    
+    .alert.wppb-notice {
+        background: #fbef91;
+    }
+
+    .alert.wppb-error,
+    .alert.wppb-warning {
+        background: #FF8C8C;
+    }
 }

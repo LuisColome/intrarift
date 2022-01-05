@@ -3725,6 +3725,16 @@ textarea:focus:-ms-input-placeholder {
 .entry-content #select_user_to_edit_form .wppb-form-field {
     max-width: 900px;
 }
+.entry-content .alert.wppb-success {
+    background: #398e0e;
+}
+.entry-content .alert.wppb-notice {
+    background: #fbef91;
+}
+.entry-content .alert.wppb-error,
+.entry-content .alert.wppb-warning {
+    background: #FF8C8C;
+}
 
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
