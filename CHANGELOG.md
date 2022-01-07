@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [1.2.5](https://github.com/LuisColome/intrarift/releases/tag/v1.2.5) - 2022-01-07
 #### Updated
-- HTML markcup (and styles) on the Home page notifications to avoid conflicts.
+- HTML markup (and styles) on the Home page notifications to avoid conflicts.
 
 ### [1.2.4](https://github.com/LuisColome/intrarift/releases/tag/v1.2.4) - 2021-12-22
 #### Fixed 
