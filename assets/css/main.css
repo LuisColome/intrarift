@@ -784,7 +784,7 @@ figure {
     background-color: #d89100;
 }
 
-/* Notifications
+/* Custom notifications on Home page (ACF + custom HTML markup)
 -------------------------------------------- */
 .rv-alert {
     display: -ms-grid;
