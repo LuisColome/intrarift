@@ -1,6 +1,6 @@
 # IntraRift Genesis Child Theme
 
-[![IntraRift Genesis Child Theme badge][changelog-badge]][changelog] [![Version 1.2.5 Badge][version-badge]][changelog]
+[![IntraRift Genesis Child Theme badge][changelog-badge]][changelog] [![Version 1.2.6 Badge][version-badge]][changelog]
 
 ## Author:
 
@@ -18,20 +18,20 @@ Since it is a private project, no public use is allowed. Thank you :octocat:
 
 1. SCSS with Prepros to compile it.
 2. Easy to customize
-4. Child theme tweaks
-5. WordPress cleanup functions
-6. ACF support
+3. Child theme tweaks
+4. WordPress cleanup functions
+5. ACF support
 
 ### Credits
 
 Without these projects, this WordPress Genesis Child Theme wouldn't be where it is today.
 
-* [Genesis Framework](http://my.studiopress.com/themes/genesis/)
-* [SASS / SCSS](http://sass-lang.com/)
-* [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
-* [Eduardo Boucas' Include Media Queries](https://eduardoboucas.github.io/include-media/)
-* [Laragon](https://laragon.org/)
+-   [Genesis Framework](http://my.studiopress.com/themes/genesis/)
+-   [SASS / SCSS](http://sass-lang.com/)
+-   [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
+-   [Eduardo Boucas' Include Media Queries](https://eduardoboucas.github.io/include-media/)
+-   [Laragon](https://laragon.org/)
 
 [changelog]: ./CHANGELOG.md
-[changelog-badge]: https://img.shields.io/badge/Changelog-IntraRift%20Genesis%20Child%20Theme%20v1.2.5-orange
-[version-badge]: https://img.shields.io/badge/version-1.2.5-informational.svg
+[changelog-badge]: https://img.shields.io/badge/Changelog-IntraRift%20Genesis%20Child%20Theme%20v1.2.6-orange
+[version-badge]: https://img.shields.io/badge/version-1.2.6-informational.svg
