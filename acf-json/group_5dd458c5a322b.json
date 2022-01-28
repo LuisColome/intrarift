@@ -43,6 +43,41 @@
             "mime_types": ""
         },
         {
+            "key": "field_61f3e653515f0",
+            "label": "Status",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61f3e661515f1",
+            "label": "Status iframe",
+            "name": "intra_status_iframe",
+            "type": "textarea",
+            "instructions": "Introduce el iframe del la hoja de cálculo de Google Drive de tu elección.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_61b1e3542fd71",
             "label": "Notificaciones",
             "name": "",
@@ -117,5 +152,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1639048190
+    "modified": 1643374475
 }

@@ -168,9 +168,14 @@ function lcm_intranet_custom_tabs() {
 
                 <!-- Tab content RUTAS -->
                 <div class="tabcontent rv__sheet" id="tab3">
+                    <div class="tabcontent__wrap">
+                        <?php
 
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSIMwIw0KEskwfiSp9I1l6dW-eUlSDO15glmrf8k0ds5Trrd4uvekghRZUR8vaQ1Q/pubhtml?widget=true&amp;headers=false"></iframe>
-                    
+                            $status = get_field('intra_status_iframe', 'options'); 
+                            echo $status;
+
+                        ?>
+                    </div>   
                 </div>
 
 
