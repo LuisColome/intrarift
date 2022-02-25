@@ -5,11 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) ([Spanish version](https://keepachangelog.com/es-ES/1.0.0/)),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) (or at least I'll try to).
 
-### [1.2.6](https://github.com/LuisColome/intrarift/releases/tag/v1.2.6) - 2022-01-28
+### [1.2.7](https://github.com/LuisColome/intrarift/releases/tag/v1.2.7) - 2022-02-25
 
 #### Added
 
--   Custom field to edit status iframe.
+-   Add essential files for hidden form functionality
+-   Add initial structure for hidden form.
+
+#### Changed
+
+-   Update link and text for download link
 
 ### [1.2.5](https://github.com/LuisColome/intrarift/releases/tag/v1.2.5) - 2022-01-07
 
