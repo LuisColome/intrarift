@@ -825,6 +825,226 @@ figure {
     vertical-align: middle;
 }
 
+/* Rift-Valley.com hidden form  
+---------------------------------------------------------------------------------------------------- */
+.rv-hidden {
+    position: fixed;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    right: -100%;
+    width: 100%;
+    max-width: 900px;
+    height: 100vh;
+    padding-bottom: 32px;
+    z-index: 105;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    background: #d89100;
+    overflow-x: scroll;
+}
+.rv-hidden.active {
+    background: rgba(216, 145, 0, 0.9);
+    right: 0;
+}
+.rv-hidden__wrap {
+    max-width: 540px;
+    padding: 32px;
+}
+.rv-hidden__header {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0 24px 0 0;
+}
+@media (min-width: 985px) {
+    .admin-bar .rv-hidden__header {
+        top: 54px;
+    }
+}
+.rv-hidden__title {
+    font-size: 37px;
+    font-weight: 600;
+    text-align: center;
+    color: #0f0e0e;
+}
+@media (min-width: 768px) {
+    .rv-hidden__title {
+        font-size: 42px;
+    }
+}
+@media (min-width: 985px) {
+    .rv-hidden__title {
+        font-size: 48px;
+    }
+}
+.rv-hidden__intro {
+    font-size: 18px;
+    text-align: center;
+    color: #0f0e0e;
+    margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+    .rv-hidden__intro {
+        font-size: 19.5px;
+    }
+}
+@media (min-width: 985px) {
+    .rv-hidden__intro {
+        font-size: 21px;
+    }
+}
+.rv-hidden__close {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+.rv-hidden .wpcf7-form input,
+.rv-hidden .wpcf7-form select,
+.rv-hidden .wpcf7-form textarea {
+    border-radius: 6px;
+}
+.rv-hidden__links {
+    background-color: #976600;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+.rv-hidden__links__wrap {
+    max-width: 540px;
+    padding: 0 32px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+@media (min-width: 430px) {
+    .rv-hidden__links__wrap {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+    }
+}
+@media (max-width: 430px) {
+    .rv-hidden__whatsapp {
+        margin-bottom: 20px;
+    }
+}
+.rv-hidden__whatsapp, .rv-hidden__phone {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+.rv-hidden__whatsapp__link, .rv-hidden__phone__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    color: #1d1b1b;
+    text-decoration: none;
+}
+.rv-hidden__whatsapp__link:hover, .rv-hidden__phone__link:hover {
+    color: #1d1b1b;
+}
+.rv-hidden__whatsapp__link svg, .rv-hidden__phone__link svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.rv-floating-button {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 19;
+}
+@media (min-width: 600px) {
+    .rv-floating-button {
+        top: 20%;
+        right: 0;
+        left: auto;
+        bottom: auto;
+        -webkit-transform-origin: bottom right;
+                transform-origin: bottom right;
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+    }
+}
+.rv-floating-button .rv-floating-button__link.wp-block-button__link {
+    line-height: 1.656;
+    padding: 0.2ch 2ch;
+    border-radius: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+}
+@media (min-width: 600px) {
+    .rv-floating-button .rv-floating-button__link.wp-block-button__link {
+        width: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+.rv-floating-button .rv-floating-button__link.wp-block-button__link svg {
+    margin: 0 10px 0 0;
+}
+
 /* Blockquote
 --------------------------------------------- */
 blockquote.wp-block-quote {

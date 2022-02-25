@@ -6,7 +6,6 @@
 @use "abstracts/functions";
 @use "abstracts/variables";
 
-
 // Base
 @use "base/reset";
 @use "base/base";
@@ -18,6 +17,7 @@
 @use "components/subscriptions";
 @use "components/generador-enlaces";
 @use "components/notifications";
+@use "components/hidden";
 
 // -- Blocks Core
 @use "components/blocks-core/blockquote";
@@ -64,7 +64,6 @@
 @use "layouts/widgets";
 // @use "layouts/gutenberg";
 @use "layouts/forms";
-// @use "layouts/hidden";
 @use "layouts/site-footer";
 
 @use "vendor/include-media";
