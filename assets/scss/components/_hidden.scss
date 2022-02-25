@@ -1,0 +1,170 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Rift-Valley.com hidden form  
+---------------------------------------------------------------------------------------------------- */
+
+.rv-hidden {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    right: -100%;
+    width: 100%;
+    max-width: 900px;
+    height: 100vh;
+    padding-bottom: $grid-gap;
+    z-index: 105;
+    transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    background: $primary-color;
+    overflow-x: scroll;
+
+    &.active {
+        background: rgba($primary-color, 0.9);
+        right: 0;
+    }
+
+    &__wrap {
+        max-width: 540px;
+        padding: $grid-gap;
+    }
+
+    &__header {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 24px 0 0;
+
+        // Display the extra margin only with the admin bar.
+        @include media(">=medium") {
+            .admin-bar & {
+                top: 54px;
+            }
+        }
+    }
+
+    &__title {
+        @include font-sizes(37px, 42px, 48px);
+        font-weight: 600;
+        text-align: center;
+        color: $grey-darker;
+    }
+
+    &__intro {
+        @include font-sizes(18px, 19.5px, 21px);
+        text-align: center;
+        color: $grey-darker;
+        margin-bottom: 10px;
+    }
+
+    &__close {
+        @include button-reset();
+        width: 24px;
+        height: 24px;
+    }
+
+    .wpcf7-form {
+        // border radius to all form elements.
+        input,
+        select,
+        textarea {
+            border-radius: 6px;
+        }
+    }
+
+    &__links {
+        background-color: #976600;
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+
+    // same width as the content above.
+    &__links__wrap {
+        max-width: 540px;
+        padding: 0 $grid-gap;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
+
+        @include media(">=430px") {
+            flex-flow: row nowrap;
+        }
+    }
+
+    @include media("<=430px") {
+        &__whatsapp {
+            margin-bottom: $block-margin;
+        }
+    }
+
+    &__whatsapp,
+    &__phone {
+        @include button-reset();
+
+        &__link {
+            display: flex;
+            flex-flow: row nowrap;
+            color: $grey_dark;
+            text-decoration: none;
+
+            &:hover {
+                color: $grey_dark;
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.rv-floating-button {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 19;
+
+    // fixed on the  right on tablet and desktop
+    @include media(">=small") {
+        top: 20%;
+        right: 0;
+        left: auto;
+        bottom: auto;
+        transform-origin: bottom right;
+        transform: rotate(-90deg);
+    }
+
+    .rv-floating-button__link.wp-block-button__link {
+        line-height: 1.656;
+        padding: 0.2ch 2ch;
+        border-radius: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+
+        // fixed on the  right on tablet and desktop
+        @include media(">=small") {
+            width: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        svg {
+            margin: 0 10px 0 0;
+        }
+    }
+}
