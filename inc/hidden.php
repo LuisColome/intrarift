@@ -100,7 +100,6 @@ add_action( 'genesis_after', 'riftvalley_hidden_box', 12 );
 function riftvalley_floating_button(){
 
     // Add the floating button with the correct class to activate the hidden box
-	// if( is_singular('viajes') ) {
         ?>
         <div class="rv-floating-button">
             <button class="rv-floating-button__link rv-hidden__open wp-block-button__link" >
@@ -121,7 +120,6 @@ function riftvalley_floating_button(){
             </button>
         </div>
         <?php   
-    // }
 }
-//add_action( 'genesis_after', 'riftvalley_floating_button', 14 );
+add_action( 'genesis_after', 'riftvalley_floating_button', 14 );
 
