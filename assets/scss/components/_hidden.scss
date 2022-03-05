@@ -28,6 +28,7 @@
 
     &__wrap {
         max-width: 540px;
+        width: 100%;
         padding: $grid-gap;
     }
 
@@ -70,12 +71,63 @@
         height: 24px;
     }
 
-    .wpcf7-form {
-        // border radius to all form elements.
+    // Form elements (WPForms
+    // ---------------------------------------------------------------
+
+    // Reset WP Forms.
+    .wpforms-container .wpforms-field {
+        padding: 0;
+    }
+
+    .wpforms-container {
         input,
         select,
         textarea {
+            margin: 1rem 0;
+            border: 2px solid #ffffff;
+            color: #1d1b1b;
             border-radius: 6px;
+        }
+
+        @include placeholder-color($grey_6);
+
+        // Align center the submit button.
+        .wpforms-submit-container {
+            text-align: center;
+        }
+
+        // Submit button styles.
+        .wpforms-submit {
+            border: 2px solid $black;
+            border-radius: 6px;
+            background-color: $black;
+            color: $white;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 32px;
+            padding: 0.6ch 2.1ch;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                border: 2px solid $grey-base;
+                background-color: $grey-base;
+            }
+        }
+
+        // Privacy policy check.
+        .wpforms-field-label-inline {
+            color: $grey-base;
+            margin: 1rem 0;
+            a {
+                color: $grey-base;
+                text-decoration-color: inherit;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 

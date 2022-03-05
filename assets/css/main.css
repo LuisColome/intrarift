@@ -858,6 +858,7 @@ figure {
 }
 .rv-hidden__wrap {
     max-width: 540px;
+    width: 100%;
     padding: 32px;
 }
 .rv-hidden__header {
@@ -926,10 +927,65 @@ figure {
     width: 24px;
     height: 24px;
 }
-.rv-hidden .wpcf7-form input,
-.rv-hidden .wpcf7-form select,
-.rv-hidden .wpcf7-form textarea {
+.rv-hidden .wpforms-container .wpforms-field {
+    padding: 0;
+}
+.rv-hidden .wpforms-container input,
+.rv-hidden .wpforms-container select,
+.rv-hidden .wpforms-container textarea {
+    margin: 1rem 0;
+    border: 2px solid #ffffff;
+    color: #1d1b1b;
     border-radius: 6px;
+}
+.rv-hidden .wpforms-container ::-moz-placeholder {
+    color: #9e9e9e;
+    opacity: 1;
+}
+.rv-hidden .wpforms-container ::-ms-input-placeholder {
+    color: #9e9e9e;
+}
+.rv-hidden .wpforms-container ::-webkit-input-placeholder {
+    color: #9e9e9e;
+}
+.rv-hidden .wpforms-container input:focus::-webkit-input-placeholder,
+.rv-hidden .wpforms-container input:focus::-moz-placeholder,
+.rv-hidden .wpforms-container input:focus:-ms-input-placeholder,
+.rv-hidden .wpforms-container textarea:focus::-webkit-input-placeholder,
+.rv-hidden .wpforms-container textarea:focus::-moz-placeholder,
+.rv-hidden .wpforms-container textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+.rv-hidden .wpforms-container .wpforms-submit-container {
+    text-align: center;
+}
+.rv-hidden .wpforms-container .wpforms-submit {
+    border: 2px solid #000;
+    border-radius: 6px;
+    background-color: #000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 32px;
+    padding: 0.6ch 2.1ch;
+    text-decoration: none;
+}
+.rv-hidden .wpforms-container .wpforms-submit:hover, .rv-hidden .wpforms-container .wpforms-submit:focus {
+    border: 2px solid #272626;
+    background-color: #272626;
+}
+.rv-hidden .wpforms-container .wpforms-field-label-inline {
+    color: #272626;
+    margin: 1rem 0;
+}
+.rv-hidden .wpforms-container .wpforms-field-label-inline a {
+    color: #272626;
+    -webkit-text-decoration-color: inherit;
+            text-decoration-color: inherit;
+}
+.rv-hidden .wpforms-container .wpforms-field-label-inline a:hover {
+    text-decoration: none;
 }
 .rv-hidden__links {
     background-color: #976600;
