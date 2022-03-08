@@ -989,11 +989,14 @@ figure {
 }
 .rv-hidden .wpforms-container .wpforms-confirmation-container {
     color: white;
-    border: 1px solid white;
+    border: 1px solid #00555f;
     border-radius: 6px;
-    padding: 1rem;
-    background-color: #2c652c;
+    padding: 2rem;
+    background-color: #00555f;
     text-align: center;
+}
+.rv-hidden .wpforms-container .wpforms-confirmation-container p {
+    margin: 0;
 }
 .rv-hidden__links {
     background-color: #976600;
