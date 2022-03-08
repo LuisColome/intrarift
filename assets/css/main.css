@@ -987,6 +987,14 @@ figure {
 .rv-hidden .wpforms-container .wpforms-field-label-inline a:hover {
     text-decoration: none;
 }
+.rv-hidden .wpforms-container .wpforms-confirmation-container {
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 1rem;
+    background-color: #2c652c;
+    text-align: center;
+}
 .rv-hidden__links {
     background-color: #976600;
     width: 100%;

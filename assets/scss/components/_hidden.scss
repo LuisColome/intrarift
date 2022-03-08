@@ -129,6 +129,19 @@
                 }
             }
         }
+
+        .wpforms-confirmation-container {
+            color: white;
+            border: 1px solid #00555f;
+            border-radius: 6px;
+            padding: 2rem;
+            background-color: #00555f;
+            text-align: center;
+
+            p {
+                margin: 0;
+            }
+        }
     }
 
     &__links {
