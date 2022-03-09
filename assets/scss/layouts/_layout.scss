@@ -27,7 +27,7 @@
 
 .site-inner {
     clear: both;
-    max-width: calc($grid-width + 60px); // 1200px wide plus padding
+    max-width: $grid-width + 60px; // 1200px wide plus padding
     margin: 0 auto;
     padding: 117px 0 30px;
     min-height: 100vh;
@@ -36,8 +36,6 @@
         padding: 117px $wrap_edge 30px;
     }
 
-
-
     // Remove the top padding if the first block is alignfull.
     .first-block-align-full &,
     .first-block-cover-full & {
@@ -45,10 +43,8 @@
     }
 }
 
-
 .content-sidebar,
 .sidebar-content {
-
     .site-inner {
         max-width: $grid-width;
     }
@@ -77,7 +73,6 @@
 }
 
 @include media("screen", ">=medium") {
-
     /* Content
     --------------------------------------------- */
 
@@ -95,26 +90,20 @@
     }
 
     .sidebar-content {
-
         .content-area {
             grid-template-columns: minmax(250px, 30%) 1fr;
             grid-template-areas: "sidebar site-main";
         }
     }
-  
 }
-
-
 
 /* Some of the single designs have a narrower site-main.
 ------------------------------------------------------------------ */
 .single {
-
     &.post-type-post,
     &.post-type-etnias,
     &.post-type-lugares,
     &.post-type-parques {
-
         .site-main {
             max-width: 854px;
         }
@@ -125,29 +114,24 @@
 --------------------------------------------- */
 
 .single {
-
     &.post-type-post,
     &.post-type-etnias,
     &.post-type-lugares,
     &.post-type-parques {
+        .featured-image {
+            img {
+                margin: 0 auto calc(2 * #{$block-margin});
+            }
 
-        
-
-            .featured-image {
+            @include media(">=1024px") {
+                width: 985px;
 
                 img {
-                    margin: 0 auto calc( 2 * #{$block-margin});
-                }
-
-                @include media('>=1024px') {
-                    width: 985px;
-                    
-                    img {
-                    margin: 0 -65px calc( 2 * #{$block-margin});
+                    margin: 0 -65px calc(2 * #{$block-margin});
                     max-width: 100%;
-                    }
                 }
             }
+        }
     }
 }
 
@@ -155,32 +139,32 @@
 --------------------------------------------- */
 
 .genesis-skip-link {
-	display: none;
+    display: none;
 }
 
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut {
-	position: absolute !important;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	width: 1px;
-	border: 0;
-	overflow: hidden;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
 }
 
 .screen-reader-text:focus,
-.screen-reader-shortcut:focus  {
-	clip: auto !important;
-	height: auto;
-	width: auto;
-	display: block;
-	font-size: 1em;
-	font-weight: bold;
-	padding: 15px 23px 14px;
-	color: $grey_9;
-	background: $white;
-	z-index: 100000; /* Above WP toolbar. */
-	text-decoration: none;
-	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+.screen-reader-shortcut:focus {
+    clip: auto !important;
+    height: auto;
+    width: auto;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 15px 23px 14px;
+    color: $grey_9;
+    background: $white;
+    z-index: 100000; /* Above WP toolbar. */
+    text-decoration: none;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }

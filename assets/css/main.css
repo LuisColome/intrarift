@@ -6,42 +6,6 @@
     font-style: normal;
     font-display: swap;
 }
-/**
- * Button Reset
- *
- */
-/**
- * Grid, Center Last 
- *
- */
-/**
- * Margin, No Edge
- * Removes left margin from first item, right margin from last item
- */
-/**
- * Icon Position
- *
- */
-/**
- * Block Cover
- * Creates a block that covers the full width/height of parent div. Typically used on a :before pseudo element
- */
-/**
- * Placeholder Color
- *
- */
-/**
- * Clearfix
- *
- */
-/**
- * Font Sizes
- *
-**/
-/**
- * Columns
- *
- */
 /* HTML5 Reset
 ---------------------------------------------------------------------------- */
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
@@ -1897,7 +1861,7 @@ hr:not(.kt-divider)::before {
 --------------------------------------------- */
 .site-inner {
     clear: both;
-    max-width: calc($grid-width + 60px);
+    max-width: 1060px;
     margin: 0 auto;
     padding: 117px 0 30px;
     min-height: 100vh;
@@ -1993,14 +1957,14 @@ hr:not(.kt-divider)::before {
 /* Featured image on narrower site-main.
 --------------------------------------------- */
 .single.post-type-post .featured-image img, .single.post-type-etnias .featured-image img, .single.post-type-lugares .featured-image img, .single.post-type-parques .featured-image img {
-    margin: 0 auto calc( 2 * 20px);
+    margin: 0 auto calc(2 * 20px);
 }
 @media (min-width: 1024px) {
     .single.post-type-post .featured-image, .single.post-type-etnias .featured-image, .single.post-type-lugares .featured-image, .single.post-type-parques .featured-image {
         width: 985px;
     }
     .single.post-type-post .featured-image img, .single.post-type-etnias .featured-image img, .single.post-type-lugares .featured-image img, .single.post-type-parques .featured-image img {
-        margin: 0 -65px calc( 2 * 20px);
+        margin: 0 -65px calc(2 * 20px);
         max-width: 100%;
     }
 }
