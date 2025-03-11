@@ -300,27 +300,19 @@ add_action('get_header', 'load_recaptcha_only_with_cf7', 22);
 function lcm_cpt_posts_per_page($query)
 {
     if( !is_admin() ) {
-        switch ( $query->query_vars['post_type'] )
-        {
-            case 'etnias':
-                $query->query_vars['posts_per_page'] = -1;
-                break;
-
-            case 'viajes':
-                $query->query_vars['posts_per_page'] = -1;
-                break;
-
-            case 'lugares':
-                $query->query_vars['posts_per_page'] = -1;
-                break;
-
-            case 'parques':
-                $query->query_vars['posts_per_page'] = -1;
-                break;
-
+        if ( isset( $query->query_vars['post_type'] ) ) { // Verificar si 'post_type' está definida
+            switch ( $query->query_vars['post_type'] )
+            {
+                case 'etnias':
+                case 'viajes':
+                case 'lugares':
+                case 'parques':
+                    $query->query_vars['posts_per_page'] = -1;
+                    break;
+            }
         }
-        return $query;
     }
+    return $query; // Asegúrate de siempre retornar la consulta modificada
 }
 add_filter( 'pre_get_posts', 'lcm_cpt_posts_per_page' );
 

@@ -36,16 +36,29 @@
 
             <!-- Viaje Info -->
             <div class="viaje__header__info">
-                <?php $terms = get_the_terms( $post->ID, 'destinos');
-                    if ( $terms && ! is_wp_error( $terms ) ) { ?>
-                        <div class="viaje__pais"><span class="viaje__guion">—</span><span class="viaje__paises">
-                        <?php foreach($terms as $term) {
+            <?php 
+                $terms = get_the_terms( $post->ID, 'destinos' );
+                if ( $terms && ! is_wp_error( $terms ) ) { 
+                    // Inicializar la variable antes de usarla
+                    $entry_terms = '';
+
+                    ?>
+                    <div class="viaje__pais">
+                        <span class="viaje__guion">—</span>
+                        <span class="viaje__paises">
+                        <?php 
+                        foreach ( $terms as $term ) {
                             $entry_terms .= $term->name . ', ';
                         } 
+                        // Eliminar la última coma y espacio
                         $entry_terms = rtrim( $entry_terms, ', ' );
-                        echo $entry_terms?>
-                        <span class="viaje__guion">—</span></span></div>
-                    <?php } 
+                        echo esc_html( $entry_terms ); // Escapar para mayor seguridad
+                        ?>
+                        <span class="viaje__guion">—</span>
+                        </span>
+                    </div>
+                <?php 
+                } 
                 ?>
             
                 <h2 class="viaje__title" itemprop="headline">

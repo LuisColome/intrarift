@@ -198,26 +198,25 @@ add_filter( 'genesis_comment_list_args', 'genesis_sample_comments_gravatar' );
  */
 function genesis_sample_blocks_body_classes( $classes ) {
 
-	if ( ! is_singular() || ! function_exists( 'has_blocks' ) || ! function_exists( 'parse_blocks' ) ) {
-		return $classes;
-	}
+    if ( ! is_singular() || ! function_exists( 'has_blocks' ) || ! function_exists( 'parse_blocks' ) ) {
+        return $classes;
+    }
 
-	$post_object = get_post( get_the_ID() );
-	$blocks      = (array) parse_blocks( $post_object->post_content );
+    $post_object = get_post( get_the_ID() );
+    $blocks      = (array) parse_blocks( $post_object->post_content );
 
-	if ( $blocks[0]['blockName'] === 'core/cover' && $blocks[0]['attrs']['align'] === 'full' ) {
-		$classes[] = 'first-block-cover-full';
-	}
+    if ( isset( $blocks[0]['blockName'] ) && $blocks[0]['blockName'] === 'core/cover' && 
+         isset( $blocks[0]['attrs']['align'] ) && $blocks[0]['attrs']['align'] === 'full' ) {
+        $classes[] = 'first-block-cover-full';
+    }
 
-	if ( $blocks[0]['attrs']['align'] === 'full' ) {
-		$classes[] = 'first-block-align-full';
-	}
+    if ( isset( $blocks[0]['attrs']['align'] ) && $blocks[0]['attrs']['align'] === 'full' ) {
+        $classes[] = 'first-block-align-full';
+    }
 
-	return $classes;
-
+    return $classes;
 }
 add_filter( 'body_class', 'genesis_sample_blocks_body_classes' );
-
 
 /**
  * 
