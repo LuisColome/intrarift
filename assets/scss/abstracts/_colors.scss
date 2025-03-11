@@ -1,4 +1,3 @@
-
 // Colors
 $white: #ffffff;
 $grey_1: #fafafa;
@@ -13,19 +12,23 @@ $grey_9: #4e4c4c;
 $grey_10: #212223;
 $black: #000;
 
-// Brand Colors. Used in some Sass loops. 
+// Brand Colors. Used in some Sass loops.
 $brand_colors: (
-	'yellow': #d89100,
-    'bg-yellow': #c28300, // Route contact section bg.
-    'light-grey' : #acacac,
-    'medium-grey' : #4e4c4c,
-	'grey'	: #272626, // light background.
-    'dark-grey' : #1d1b1b, // background
-    'darker-grey' : #0f0e0e, // darker grey background. For the loops.
+  "yellow": #b3975e,
+  "bg-yellow": #ab8d50,
+  // Route contact section bg.
+  "light-grey": #acacac,
+  "medium-grey": #4e4c4c,
+  "grey": #272626,
+  // light background.
+  "dark-grey": #1d1b1b,
+  // background
+  "darker-grey": #0f0e0e,
+  // darker grey background. For the loops.
 );
 
 // Color variables
-$primary-color: #d89100;
+$primary-color: #b3975e;
 $bg-yellow: darken($primary-color, 4.3137); // #c28300
 $highlight: lighten($primary-color, 8);
 $rift-red: #8f0b30;
@@ -34,7 +37,7 @@ $grey-light: #acacac;
 $grey-medium: #4e4c4c;
 $grey-base: #272626;
 $grey-dark: #1d1b1b;
-$semi-grey-dark: rgba(29,29,29,.92);
+$semi-grey-dark: rgba(29, 29, 29, 0.92);
 $grey-darker: #0f0e0e;
 
 // Base-color

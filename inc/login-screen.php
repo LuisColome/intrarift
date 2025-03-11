@@ -43,7 +43,7 @@ function ea_login_logo() {
         }
 
         .login form {
-            border: 2px solid #d89100;
+            border: 2px solid #b3975e;
             border-radius: 10px;
             background: #272626;
         }
@@ -79,19 +79,19 @@ function ea_login_logo() {
         }
 
         .login .wp-hide-pw > .dashicons {
-            color: #d89100;
+            color: #b3975e;
         }
 
         .login input[type="checkbox"]:focus,
         .login input[type="password"]:focus,
         .login input[type="text"]:focus {
-            border-color: #d89100;
-            box-shadow: 0 0 0 1px #d89100;
+            border-color: #b3975e;
+            box-shadow: 0 0 0 1px #b3975e;
         }
 
         .wp-core-ui .button-primary {
-            background: #d89100;
-            border-color: #d89100;
+            background: #b3975e;
+            border-color: #b3975e;
             color: #272626;
             border-radius: 6px;
         }
@@ -104,7 +104,7 @@ function ea_login_logo() {
         }
 
         .login #nav a {
-            color: #d89100;
+            color: #b3975e;
         }
         #backtoblog {
             display: none;
@@ -113,7 +113,7 @@ function ea_login_logo() {
         .login #login_error, 
         .login .message, 
         .login .success {
-            border-left: 4px solid #d89100;
+            border-left: 4px solid #b3975e;
             padding: 12px;
             margin-left: 0;
             margin-bottom: 20px;

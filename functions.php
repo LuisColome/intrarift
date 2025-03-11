@@ -180,7 +180,7 @@ function ea_child_theme_setup() {
 		array(
 			'name'  => __( 'Yellow', 'ea_genesis_child' ),
 			'slug'  => 'yellow',
-			'color'	=> '#d89100',
+			'color'	=> '#b3975e',
 		),
 		array(
 			'name'  => __( 'BG Yellow', 'ea_genesis_child' ),
